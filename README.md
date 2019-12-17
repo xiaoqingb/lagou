@@ -1,2 +1,2 @@
 拉勾网
-xiaoqingb.github.io/lagou/
+https://xiaoqingb.github.io/lagou/
