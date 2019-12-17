@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- 引入layui -->
+    <link rel="stylesheet" href="../src/layui/css/layui.css">
+    <!-- 引入less -->
+    <link rel="stylesheet/less" href="../src/css/index.less">
+    <script src="https://cdn.bootcss.com/less.js/3.10.3/less.js"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">    
+    <title>拉勾网</title>
+</head>
+<body>
+    <!-- 页眉 -->
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <span id="label">
+                    拉钩
+                </span>
+                <div id="city-change-container">
+                    <span id="current-city">
+                        全国站
+                    </span>
+                    <span id="city-change-btn">
+                        [切换城市]
+                    </span>
+                </div>
+                <ul class="layui-nav" lay-filter="">
+                    <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+                    <li class="layui-nav-item "><a href="">公司</a></li>
+                    <li class="layui-nav-item"><a href="">校园招聘</a></li>
+                    <li class="layui-nav-item"><a href="javascript:;">言职</a></li>
+                    <li class="layui-nav-item"><a href="">课程</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <div>
+                    <span>上传简历</span>
+                    <span>职位订阅</span>
+                    <span>登录</span>
+                    <span>注册</span>
+                    <span class="app-download">拉钩App</span>
+                    <span>进入企业版</span>
+                </div> 
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体部分 -->
+    <main>
+        <!-- 登录注册部分 -->
+        <div class="regist-login">
+            <div class="regist-login-container">
+                <img src="//www.lgstatic.com/lg-www-fed/common/widgets/un_login_banner/img/logo_41a2761.png" alt="">
+                <div class="center-msg">
+                    <p>去互联网好公司工作，就上<span>拉钩</span></p>
+                    <p>810864家公司 | 6628609个职位，在拉勾等你</p>
+                </div>
+                <div class="inputs-container">
+                    <div class="layui-input-block input-item" id="phone-number">
+                        <input name="phone-number" placeholder="输入手机号" class="layui-input">
+                    </div>
+                    <div class="layui-input-block input-item"  id="validate-number" >
+                        <input name="phone-number" placeholder="验证码" class="layui-input">
+                        <div id="get-validate-number">获取</div>
+                    </div>
+                    <button type="button">登录/注册</button>
+                </div>
+            </div>
+   
+        </div>
+
+        <!-- 搜索部分 -->
+        <div class="search">
+            <div class="search-container">
+                <div>
+                    <div class="layui-input-block input-item"  id="search-box" >
+                        <input name="search-content" placeholder="字节跳动"" class="layui-input">
+                        <span id="search-btn">搜索</span>
+                    </div>
+                </div>
+                <p>热门搜索：
+                    <span>java</span>
+                    <span>前端</span>
+                    <span>运维</span>
+                    <span>产品经理</span>
+                    <span>技术总监</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- 中部导航栏部分 -->
+        <div class="middle-box">
+            <ul class="nav-container">
+                <li class="nav-item">
+                        <span>技术</span>
+                        <div class="name-list">
+                            <a href="">
+                                <p>
+                                    java
+                                </p>
+                            </a>
+                            <a href="">
+                                <p>
+                                    PHP
+                                </p>
+                            </a>
+                            <a href="">
+                                <p>
+                                    C++
+                                </p>
+                            </a>
+                            </div>
+                        <span class='arrow'>></span>
+                        <div class="menu-box">
+                            <dl>
+                                <dt>后端开发 </dt>
+                                <dd>
+                                    <a href="">Java</a> 
+                                    <a href="">C++</a> 
+                                    <a href="">PHP</a> 
+                                    <a href="">数据挖掘</a> 
+                                    <a href="">搜索算法</a> 
+                                    <a href="">精准推荐</a> 
+                                    <a href="">C</a> 
+                                    <a href="">C#</a> 
+                                    <a href="">全栈工程师</a> 
+                                    <a href="">.NET</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>移动开发</dt>
+                                <dd>
+                                    <a href="">HTML5</a> 
+                                    <a href="">Android</a> 
+                                    <a href="">IOS</a> 
+                                    <a href="">WP</a> 
+                                    <a href="">移动开发其他</a> 
+                                    
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>前端开发</dt>
+                                <dd>
+                                    <a href="">web前端</a> 
+                                    <a href="">Flash</a> 
+                                    <a href="">html5</a> 
+                                    <a href="">javascript</a> 
+                                    <a href="">U3D</a> 
+                                    <a href="">COCOS2D-X</a> 
+                                    <a href="">前端开发其他</a> 
+                                </dd>
+                                <dt>人工智能</dt>
+                                <dd>
+                                    <a href="">深度学习</a> 
+                                    <a href="">机器学习</a> 
+                                    <a href="">图像处理</a> 
+                                    <a href="">图像识别</a> 
+                                    <a href="">语音识别</a> 
+                                    <a href="">机器师姐</a> 
+                                    <a href="">算法工程师</a> 
+                                    <a href="">自然语言处理</a> 
+                                </dd>
+                                <dt>测试</dt>
+                                <dd>
+                                    <a href="">测试工程师</a> 
+                                    <a href="">自动化测试</a> 
+                                    <a href="">功能测试</a> 
+                                    <a href="">性能测试</a> 
+                                    <a href="">测试开发</a> 
+                                    <a href="">游戏测试</a> 
+                                    <a href="">白盒测试</a> 
+                                    <a href="">灰盒测试</a> 
+                                    <a href="">黑盒测试</a> 
+                                    <a href="">手机测试</a> 
+                                    <a href="">硬件测试</a> 
+                                    <a href="">测试经理</a> 
+                                    <a href="">测试其他</a> 
+                                </dd>
+                                <dt>运维</dt>
+                                <dd>
+                                    <a href="">运维工程师</a> 
+                                    <a href="">运维开发工程师</a> 
+                                    <a href="">网络工程师</a> 
+                                    <a href="">系统工程师</a> 
+                                    <a href="">IT支持 </a> 
+                                    <a href="">IDC</a> 
+                                    <a href="">CDN</a> 
+                                    <a href="">F5</a> 
+                                    <a href="">系统管理员</a> 
+                                    <a href="">病毒分析</a> 
+                                    <a href="">web安全</a> 
+                                    <a href="">网络安全</a> 
+                                    <a href="">系统安全</a> 
+                                    <a href="">运维经理</a> 
+                                    <a href="">运维其他</a> 
+                                </dd>
+                                <dt>DBA</dt>
+                                <dd>
+                                    <a href="">MySQL</a> 
+                                    <a href="">Orcale</a> 
+                                    <a href="">SQLServer</a> 
+                                    <a href="">DB2</a> 
+                                    <a href="">MongoDB</a> 
+                                    <a href="">ETL</a> 
+                                    <a href="">Hive</a> 
+                                    <a href="">数据仓库</a> 
+                                </dd>
+                            </dl>
+                        </div>
+                </li>
+                <li class="nav-item">
+                    <span>产品</span>
+                    <div class="name-list">
+                        <a href="">
+                            <p>
+                                产品总监
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                产品经理
+                            </p>
+                        </a>
+                    </div>
+                    <span class='arrow'>></span>
+                    <div class="menu-box">
+                        <dl>
+                            <dt>产品经理 </dt>
+                            <dd>
+                                <a href="">产品经理</a> 
+                                <a href="">网页产品经理</a> 
+                                <a href="">移动产品经理</a> 
+                                <a href="">产品助理</a> 
+                                <a href="">数据产品经理</a> 
+                                <a href="">电商产品经理</a> 
+                                <a href="">游戏策划</a> 
+                                <a href="">产品实习生</a> 
+                             
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>产品设计师 </dt>
+                            <dd>
+                                <a href="">网页产品设计师</a> 
+                                <a href="">无线产品设计师</a> 
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt> 高端职位</dt>
+                            <dd>
+                                <a href=""> 产品部经理</a> 
+                                <a href="">产品总监</a> 
+                                <a href="">游戏制作人</a> 
+                            </dd>
+                        </dl>
+                      
+                    </div>
+                </li>
+              
+                <li class="nav-item">
+                    <span>设计</span>
+                    <div class="name-list">
+                        <a href="">
+                            <p>
+                                UI设计师
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                交互设计
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                网页设计师
+                            </p>
+                        </a>
+                    </div>
+                    <span class='arrow'>></span>
+                    <div class="menu-box">
+                        <dl>
+                            <dt>视觉实际 </dt>
+                            <dd>
+                                <a href="">视觉设计师</a> 
+                                <a href="">网页设计师</a> 
+                                <a href="">Flash设计师</a> 
+                                <a href="">APP设计师</a> 
+                                <a href="">UI设计师</a> 
+                                <a href="">平面设计师</a> 
+                                <a href="">美术设计师(2D/3D)</a> 
+                                <a href="">广告设计师</a> 
+                                <a href="">多媒体设计师</a> 
+                                <a href="">原画师</a> 
+                                <a href="">游戏特效</a> 
+                                <a href="">游戏界面设计师</a> 
+                                <a href="">游戏场景</a> 
+                                <a href="">游戏角色</a> 
+                                <a href="">游戏动作</a> 
+                              
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>交互设计</dt>
+                            <dd>
+                                <a href="">交互设计师</a> 
+                                <a href="">无线交互设计师</a> 
+                                <a href="">网页交互设计师</a> 
+                                <a href="">硬件交互设计师</a> 
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>用户研究</dt>
+                            <dd>
+                                <a href="">数据分析师</a> 
+                                <a href="">用户研究员</a> 
+                                <a href="">游戏数值策划</a> 
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>高端职位</dt>
+                            <dd>
+                                <a href="">设计经理/主管</a> 
+                                <a href="">设计总监</a> 
+                                <a href="">视觉设计经理/主管</a> 
+                                <a href="">交互设计经理/主管</a> 
+                                <a href="">交互设计总监</a> 
+                                <a href="">用户研究经理/主管</a> 
+                                <a href="">用户研究总监</a> 
+                            </dd>
+                        </dl>
+                     
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <span>运营</span>
+                    <div class="name-list">
+                        <a href="">
+                            <p>
+                                新媒体运营
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                编辑
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                数据运营
+                            </p>
+                        </a>
+                    </div>
+                    <div class='arrow'>></div>
+                    <div class="menu-box">
+                            <dl>
+                                <dt>运营</dt>
+                                <dd>
+                                    <a href="">游戏运营</a> 
+                                    <a href="">产品运营</a> 
+                                    <a href="">数据运营</a> 
+                                    <a href="">内容运营</a> 
+                                    <a href="">商家运营</a> 
+                                    <a href="">品类运营</a> 
+                                    <a href="">游戏运营</a> 
+                                    <a href="">网络推广</a> 
+                                    <a href="">运营专员</a> 
+                                    <a href="">网点运营</a> 
+                                    <a href="">新媒体运营</a> 
+                                    <a href="">海外运营</a> 
+                                    <a href="">运营经理</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>编辑 </dt>
+                                <dd>
+                                    <a href="">副主编</a> 
+                                    <a href="">内容编辑</a> 
+                                    <a href="">文案策划</a> 
+                                    <a href="">记者</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>客服 </dt>
+                                <dd>
+                                    <a href="">售前咨询</a> 
+                                    <a href="">售后客服</a> 
+                                    <a href="">淘宝客服</a> 
+                                    <a href="">客服经理</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>高端职位 </dt>
+                                <dd>
+                                    <a href="">主编</a> 
+                                    <a href="">运营总监</a> 
+                                    <a href="">COO</a> 
+                                    <a href="">客服总监</a> 
+                                    <a href=""></a> 
+                                    <a href=""></a> 
+                                    <a href=""></a> 
+                                </dd>
+                            </dl>
+                           
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <span>市场</span>
+                    <div class="name-list">
+                        <a href="">
+                            <p>
+                                营销市场
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                市场推广
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                市场策划
+                            </p>
+                        </a>
+                    </div>
+                    <span class='arrow'>></span>
+                    <div class="menu-box">
+                            <dl>
+                                <dt>市场/营销 </dt>
+                                <dd>
+                                    <a href="">市场营销</a> 
+                                    <a href="">市场策划</a> 
+                                    <a href="">市场顾问</a> 
+                                    <a href="">商务渠道</a> 
+                                    <a href="">商业数据分析</a> 
+                                    <a href="">活动策划</a> 
+                                    <a href="">网络营销</a> 
+                                    <a href="">海外市场</a> 
+                                    <a href="">商务专员</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>媒介/公关</dt>
+                                <dd>
+                                    <a href="">政府关系</a> 
+                                    <a href="">品牌公关</a> 
+                                    <a href="">广告协调</a> 
+                                    <a href="">媒体投放</a> 
+                                    <a href="">广告投放</a> 
+                                    <a href="">广告定价</a> 
+                                    <a href="">广告专员</a> 
+                                    <a href="">品牌合作</a> 
+                                    <a href="">品牌策划</a> 
+                                    <a href="">品牌专员</a> 
+                                    <a href="">美术指导</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>渠道/推广 </dt>
+                                <dd>
+                                    <a href="">市场推广</a> 
+                                    <a href="">渠道推广</a> 
+                                    <a href="">SEO</a> 
+                                    <a href="">SEM</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt> 高端职位</dt>
+                                <dd>
+                                    <a href="">策划经理</a> 
+                                    <a href="">媒介经理</a> 
+                                    <a href="">市场总监</a> 
+                                    <a href="">公关总监</a> 
+                                    <a href="">媒介总监</a> 
+                                    <a href="">创意总监</a> 
+                                </dd>
+                            </dl>       
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <span>销售</span>
+                    <div class="name-list">
+                        <a href="">
+                            <p>
+                                销售专员
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                销售经理
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                销售总监
+                            </p>
+                        </a>
+                    </div>
+                    <span class='arrow'>></span>
+                    <div class="menu-box">
+                            <dl>
+                                <dt>销售</dt>
+                                <dd>
+                                    <a href="">销售专员</a> 
+                                    <a href="">销售顾问</a> 
+                                    <a href="">销售经理</a> 
+                                    <a href="">客户代表</a> 
+                                    <a href="">大客户代表</a> 
+                                    <a href="">客户经理</a> 
+                                    <a href="">商务拓展</a> 
+                                    <a href="">渠道销售</a> 
+                                    <a href="">代理商销售</a> 
+                                    <a href="">电话销售</a> 
+                                    <a href="">广告销售</a> 
+                                    <a href="">信用卡销售</a> 
+                                    <a href="">保险销售</a> 
+                                    <a href="">销售工程师</a> 
+                                    <a href="">商务渠道</a> 
+                                    <a href="">其他渠道</a> 
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>销售管理</dt>
+                                <dd>
+                                    <a href="">销售总监</a> 
+                                    <a href="">商务总监</a> 
+                                    <a href="">区域总监</a> 
+                                    <a href="">城市经理</a> 
+                                    <a href="">团队经理</a> 
+                                    <a href="">销售VP</a> 
+                                    <a href="">商务主管</a> 
+                                    <a href="">其他销售管理职位</a> 
+                                </dd>
+                            </dl>
+                           
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <span>职能</span>
+                    <div class="name-list">
+                        <a href="">
+                            <p>
+                                HR
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                行政
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                审计
+                            </p>
+                        </a>
+                        <a href="">
+                            <p>
+                                财务
+                            </p>
+                        </a>
+                        </div>
+                    <span class='arrow'>></span>
+                    <div class="menu-box">
+                        <dl>
+                            <dt>人力资源</dt>
+                            <dd>
+                                <a href="">人力资源</a> 
+                                <a href="">招聘</a> 
+                                <a href="">HRBP</a> 
+                                <a href="">人事/HR</a> 
+                                <a href="">培训经理</a> 
+                                <a href="">薪资福利经理</a> 
+                                <a href="">绩效考核经理</a> 
+                                <a href="">员工关系</a> 
+                            </dd>
+                        </dl> 
+                        
+                        <dl>
+                            <dt>行政</dt>
+                            <dd>
+                                <a href="">助理</a> 
+                                <a href="">前台</a> 
+                                <a href="">行政</a> 
+                                <a href="">总助</a> 
+                                <a href="">文秘</a> 
+                            </dd>
+                        </dl>
+                         <dl>
+                            <dt>财务</dt>
+                            <dd>
+                                <a href="">会计</a> 
+                                <a href="">出纳</a> 
+                                <a href="">财务</a> 
+                                <a href="">结算</a> 
+                                <a href="">税务</a> 
+                                <a href="">审计</a> 
+                                <a href="">风控</a> 
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>法务</dt>
+                            <dd>
+                                <a href="">法务</a> 
+                                <a href="">律师</a> 
+                                <a href="">专利</a> 
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+            <div id="swiper">
+                <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://www.lgstatic.com/thumbnail_1000x0/i/image3/M01/56/CA/CgpOIF3wuyaAJNIhAAEbOHvnn4c797.JPG" width="840" height="346" alt="教育大课">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://www.lgstatic.com/thumbnail_1000x0/i/image3/M01/56/69/Cgq2xl3vgayAMDLQAAGBX7neLt0573.JPG" width="840" height="346" alt="教育新课-数据结构">
+                            </div>
+                            <div class="swiper-slide">
+                                    <img src="https://www.lgstatic.com/thumbnail_1000x0/i/image2/M01/AE/B1/CgotOV3g0reAbRZsAAE-2fC3N1s665.JPG" width="840" height="346" alt="超级雇主狂欢节">
+                            </div>
+                        </div>
+                        <!-- 如果需要导航按钮 -->
+                        <div class="swiper-button-prev page-change"></div>
+                        <div class="swiper-button-next page-change"></div>
+                    </div>
+                <div class="swiper-pagination" id="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!-- 职位列表 -->
+        <div class='job'>
+            <h2>
+                <span class="active-here">24Hour热门</span>
+                <span>最新职位</span>
+            </h2>
+            <ul class='job-list'>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                英语外教助理老师
+                            </span>
+                            <span>
+                                [18:02发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            10k-10k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验3-5年</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>教育</span>
+                        <span>英语</span>
+                        <span>口语</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_120x120/i/image2/M01/D3/E3/CgoB5lxG1sKALQcSAAAnfNnjpyU866.jpg" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">心田花开</p>
+                            <p >
+                                <span>心田花开/</span>
+                                <span>未融资/</span>
+                                <span>成都</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                高级服务端开发工...
+                            </span>
+                            <span>
+                                [09:22发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            20k-50k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验5年以上</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>Golang</span>
+                        <span>java</span>
+                        <span>C++</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image2/M01/8B/9A/CgotOV15uyKAMCL3AAAvAzXIrFw812.png" >
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">音娱时光</p>
+                            <p >
+                                <span>移动互联网/</span>
+                                <span>A轮/</span>
+                                <span>北京</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                项目经理 PMO
+                            </span>
+                            <span>
+                                [09:11发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            10k-20k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验3-5年</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>教育</span>
+                        <span>项目管理</span>
+                        <span>PMO</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image2/M01/87/64/CgotOV1yXHCACR53AAB0Ym6Vgcg363.jpg" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">晞格玛云</p>
+                            <p >
+                                <span>软件开发/</span>
+                                <span>不需要融资/</span>
+                                <span>PMO</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                品牌策划   
+                            </span>
+                            <span>
+                                [09:04发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            8k-13k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验3-5年</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>电商</span>
+                        <span>品牌策划</span>
+                        <span>品牌传播</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image3/M00/1B/BD/Cgq2xlp-cAaAAcx1AACgMYykvak039.jpg" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">伊的家</p>
+                            <p >
+                                <span>电商/</span>
+                                <span>不需要融资/</span>
+                                <span>广州</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                财务会计 
+                            </span>
+                            <span>
+                                [09:02发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            6k-8k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验3-5年</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>金融</span>
+                        <span>会计</span>
+                        <span>税务</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image2/M00/45/16/CgotOVrOrJiAUTnxAAC67u-podI607.JPG" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">顺安建筑</p>
+                            <p >
+                                <span>其他/</span>
+                                <span>不需要融资/</span>
+                                <span>广州</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                高级市场营销经理 
+                            </span>
+                            <span>
+                                [09:03发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            20k-35k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验3-5年</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>移动互联网</span>
+                        <span>市场</span>
+                        <span>市场策划</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image2/M01/9C/A2/CgotOV2r1X2ARtQdAAFlajRMYy4226.png" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">共创方程式企业管理</p>
+                            <p >
+                                <span>教育/</span>
+                                <span>不需要融资/</span>
+                                <span>苏州</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                php开发工程师 
+                            </span>
+                            <span>
+                                [10:09发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            20k-40k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验1-3年</span>
+                        /
+                        <span>大专</span>
+                    </p>
+                    <p class="job-type">
+                        <span>移动互联网</span>
+                        <span>游戏</span>
+                        <span>PHP</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image2/M01/DE/FD/CgotOVxri62AYK7GAAAPnVe2XEc579.png" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">天宇科技</p>
+                            <p >
+                                <span>移动互联网，企业服务/</span>
+                                <span>未融资/</span>
+                                <span>杭州</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                外貌服务 
+                            </span>
+                            <span>
+                                [09:02发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            18k-25k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验不限</span>
+                        /
+                        <span>大专</span>
+                    </p>
+                    <p class="job-type">
+                        <span>广告营销</span>
+                        <span>移动互联网</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image/M00/B7/B3/Cgp3O1jA0f2AX5hdAAAfzvPUpVA999.png" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">卓旺科技有限公司</p>
+                            <p >
+                                <span>电商/</span>
+                                <span>未融资/</span>
+                                <span>深圳</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class='job-item'>
+                    <span class="direction-hire">
+                        
+                    </span>
+                    <div class="job-msg">
+                        <p>
+                            <span>
+                                高级市场营销经理 
+                            </span>
+                            <span>
+                                [09:03发布]
+                            </span>
+                            <span>
+                            </span>
+                        </p>
+                        <p class="wage">
+                            20k-35k
+                        </p>
+                    </div>
+                    <p class="job-require">
+                        <span>经验3-5年</span>
+                        /
+                        <span>本科</span>
+                    </p>
+                    <p class="job-type">
+                        <span>移动互联网</span>
+                        <span>市场</span>
+                        <span>市场策划</span>
+                    </p>
+                    <div class="company">
+                        <div class="company-logo">
+                            <img src="//www.lgstatic.com/thumbnail_100x100/i/image2/M01/9C/A2/CgotOV2r1X2ARtQdAAFlajRMYy4226.png" alt="">
+                        </div>
+                        <div class="company-msg">
+                            <p class="company-name">共创方程式企业管理</p>
+                            <p >
+                                <span>教育/</span>
+                                <span>不需要融资/</span>
+                                <span>苏州</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+
+        <!-- 公司列表 -->
+        <div id="company">
+            <h2>
+                <span class="active-here">互联网热门公司榜</span>
+            </h2>
+            <ul class="company-list">
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/i/image3/M00/53/70/CgpOIFsM0f-AfWJhAABeS8NpU7I524.png" alt="">
+                        </div>
+                        <div class="item-name">
+                            闪电购
+                        </div>
+                        <p>
+                            <span>移动互联网,企业服务/</span>
+                            <span>C轮</span>
+                        </p>
+                        <p class="describe">
+                            国内领先的新零售基础服务商
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>69</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>9</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>100%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/i/image/M00/50/76/CgqKkVe0BhyAZhBNAAAvq-xa7n0928.png" alt="">
+                        </div>
+                        <div class="item-name">
+                            四方伟业
+                        </div>
+                        <p>
+                            <span>移动互联网/</span>
+                            <span>不需要融资</span>
+                        </p>
+                        <p class="describe">
+                            融洽的氛围,完善的福利,年轻的团队,扎堆的
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>122</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>35</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>66%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/i/image2/M01/A7/1A/CgoB5lvipFWAY0ZZAABTYvIYPlg429.jpg" alt="">
+                        </div>
+                        <div class="item-name">
+                            丝路天地
+                        </div>
+                        <p>
+                            <span>旅游/</span>
+                            <span>A轮</span>
+                        </p>
+                        <p class="describe">
+                            让旅行更有趣，更超值
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>108</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>10</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>70%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/image1/M00/13/FC/CgYXBlUHoIiAcP0ZAABmiwzsBBU626.png" alt="">
+                        </div>
+                        <div class="item-name">
+                                有色网
+                        </div>
+                        <p>
+                            <span>移动互联网,电商 /</span>
+                            <span>B轮</span>
+                        </p>
+                        <p class="describe">
+                                信息网站www.smm.cn；中国首个B2B有色金属电商平台mall.smm.cn
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>69</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>9</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>100%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/image1/M00/11/6B/Cgo8PFUA-GCAYxKTAACh41Stsok358.png" alt="">
+                        </div>
+                        <div class="item-name">
+                                万年历
+                        </div>
+                        <p>
+                            <span>移动互联网/</span>
+                            <span>不需要融资</span>
+                        </p>
+                        <p class="describe">
+                            累计用户数已突破3亿！
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>11</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>35</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>100%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/image1/M00/23/78/CgYXBlVIciyAMArrAABRt6FLbxs539.jpg" alt="">
+                        </div>
+                        <div class="item-name">
+                                云自媒
+                        </div>
+                        <p>
+                            <span>移动互联网/</span>
+                            <span>不需要融资</span>
+                        </p>
+                        <p class="describe">
+                            云自媒——海量一手媒体资源交易平台
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>6</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>4</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>100%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/i/image/M00/89/0D/CgpFT1rddBKANzrIAABRQi_sPt0594.png" alt="">
+                        </div>
+                        <div class="item-name">
+                            苏打科技
+                        </div>
+                        <p>
+                            <span>移动互联网,其他/</span>
+                            <span>A轮</span>
+                        </p>
+                        <p class="describe">
+                                Hello，we're soda_ 全球领先的智
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>20</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>5</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>16%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="company-item">
+                    <div class="logo-and-msg">
+                        <div class="item-logo">
+                            <img src="//www.lgstatic.com/thumbnail_160x160/i/image3/M00/53/47/Cgq2xlsL4naAO0uBAAByF2ot0Cc138.png" alt="">
+                        </div>
+                        <div class="item-name">
+                            幼狮传播
+                        </div>
+                        <p>
+                            <span>移动互联网,广告营销/</span>
+                            <span>未融资</span>
+                        </p>
+                        <p class="describe">
+                                魔都数字公关公司，与高大洋客户，新媒体的实践者、研究者批判者们终日厮混
+                        </p>
+                    </div>
+                    <div class="data-msg">
+                        <div class="interview-appraise">
+                            <p>7</p>
+                            <p>面试评价</p>
+                        </div>
+                        <div class="hiring-job">
+                            <p>8</p>
+                            <p>在招职位</p>
+                        </div>
+                        <div class="handle-efficiency">
+                            <p>68%</p>
+                            <p>简历处理率</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 友情链接 -->
+        <div class="friend-link">
+            <h2>
+                <span class="active-here">友情链接</span>
+            </h2>
+            <div class="link-container">
+                <ul class="link-list">
+                    <li>
+                        <a href="">拉勾网</a>
+                    </li>
+                    <li>
+                        <a href="">教师网</a>
+                    </li>
+                    <li>
+                        <a href="">招聘</a>
+                    </li>
+                    <li>
+                        <a href="">求职网站</a>
+                    </li>
+                    <li>
+                        <a href="">ava课</a>
+                    </li>
+                    <li>
+                        <a href="">架构课</a>
+                    </li>
+                    <li>
+                        <a href="">中大网校</a>
+                    </li>
+                    <li>
+                        <a href="">教师招聘</a>
+                    </li>
+                    <li>
+                        <a href="">人人都是产品经理</a>
+                    </li>
+                    <li>
+                        <a href="">研究报告</a>
+                    </li>
+                    <li>
+                        <a href="">互联网的一些事</a>
+                    </li>
+                    <li>
+                        <a href="">找工作</a>
+                    </li>
+                    <li>
+                        <a href="">生意经商页百科</a>
+                    </li>
+                    <li>
+                        <a href="">装修效果图</a>
+                    </li>
+                </ul>
+                <div class="spread">
+                    展开
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="footer-left">
+            <a href="">
+                <i>
+                </i>
+                <span>
+                    下载拉钩APP
+                </span>
+            </a>
+            <a href="">
+                <i>
+                    <img src="" alt="">
+                </i>
+                <span>
+                    微信小程序
+                </span>
+            </a>
+            <div class="wechat-blog">
+                <div>
+                    <i></i>
+                    <span>拉勾微信</span>
+                </div>
+                <div>
+                    <i></i>
+                    <span>拉勾微博</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-right">
+            <div>
+                <h3>企业服务</h3>
+                <p>招聘抢人宝典</p>
+                <p>公司搜索</p>
+                <p>拉勾APP</p>
+            </div>
+            <div>
+                <h3>用户帮助</h3>
+                <p>帮助中心</p>
+                <p>用户服务协议</p>
+                <p>隐私政策</p>
+                <p>在线提问</p>
+            </div>
+            <div>
+                <h3>联系方式</h3>
+                <p>服务热线：4006 2828 35 (9:00 -18:00)</p>
+                <p>企业服务邮箱：cc@lagou.com</p>
+                <p>联系我们</p>
+            </div>
+        </div>
+    </footer>
+    <a href="" id="backtop"></a>
+    <!-- 备案号 -->
+    <div class="copy-right">
+        --------------------------------------------------------------------------------------------------------------
+        <span>
+
+        </span>
+    </div>
+    <script src="../src/layui/layui.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <script>
+    layui.use(['layer', 'form', 'carousel', 'element'], function () {
+        let layer = layui.layer
+            , element = layui.element
+            , carousel = layui.carousel
+        carousel.render({
+            interval: '2000',
+            elem: '#carousel'
+            , width: '100%' //设置容器宽度
+            , arrow: 'hover' //始终显示箭头
+            , anim: 'fade' //切换动画方式
+        });
+    });
+            
+    window.onload = function() {
+                var mySwiper = new Swiper ('.swiper-container', {
+                    direction: 'horizontal', // 垂直切换选项
+                    clickable:true,
+                    loop: true, // 循环模式选项
+                    autoplay: {
+                        delay: 3000,//1秒切换一次
+                    },
+                    // 如果需要分页器
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    
+                    // 如果需要前进后退按钮
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }
+
+                })        
+            }      
+    </script>
+</body>
+</html>
